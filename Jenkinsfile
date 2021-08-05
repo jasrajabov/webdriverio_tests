@@ -24,10 +24,13 @@ pipeline {
                 }
             }
         }
-        // stage('Tests') {
-        //     steps {
-        //         sh 'npm run end_to_end'
-        //     }
-        // }
+        stage('Tests') {
+            steps {
+                nodejs(nodeJSInstallationName: 'nodeJS') {
+                    sh 'npm install'
+                    sh 'npm run end_to_end'
+                }
+            }
+        }
     }
 }
