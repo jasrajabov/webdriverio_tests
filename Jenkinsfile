@@ -24,10 +24,10 @@ pipeline {
                 }
             }
         }
-        stage('Tests') {
-            steps {
-                sh 'npm run end_to_end'
-            }
-        }
+        // stage('Tests') {
+        //     steps {
+        //         sh 'npm run end_to_end'
+        //     }
+        // }
     }
 }
